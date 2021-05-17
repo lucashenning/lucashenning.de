@@ -1,0 +1,309 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+body, html {
+	height: 100%;
+	color: #55606A;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 28px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Gugi', cursive;
+}
+
+h1 {
+	color: #fff;
+	font-size: 50px;
+	font-weight: normal;
+	line-height: 56px;
+	text-shadow: 1px 1px 1px #31393d;
+}
+
+h2 {
+	font-weight: 300;
+	line-height: 1.5em;
+	font-size: 48px;
+}
+
+.header {
+	position: fixed;
+	width: 100%;
+	background: #fff;
+	color: #AEAEAE;
+	z-index: 10;
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.navbar {
+	background: none;
+}
+
+.header .navbar-brand {
+	font-weight: 900;
+	color: #55606A;
+}
+
+.header .navbar {
+	margin: 0;
+	border: 0;
+}
+
+.navbar a {
+	color: #AEAEAE;
+}
+
+.navbar-nav {
+	text-transform: uppercase;
+}
+
+.navbar a:hover {
+	color: #4C4F55;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	background-color: #fff;
+}
+
+.navbar .active a{
+	background-color: #eee;
+	color: #4C4F55;
+}
+
+.page-section {
+	max-width: 100%;
+    height: auto;
+	padding: 0 0 30px 0;
+	border-bottom: 0px solid #fff;
+	background: #F5F6F6;
+}
+
+.page-section h1 {
+	font-size: 4em;
+	margin: 50px 0;
+}
+
+.page-section p {
+	font-weight: 300;
+	font-size: 20px;
+	margin-top: 0.5em;
+}
+.page-section p a {
+	font-weight: 500;
+}
+.page-section p.lead {
+	font-size: 1.8em;
+}
+.page-section p.caption {
+	color: #fff;
+	padding: 20px;
+	background: url(../images/trans_black_25.png);
+	text-shadow: 1px 1px 1px #000;
+}
+.page-section p.console {
+	font-family: monospace;
+	font-weight: normal;
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	color: #fff;
+	text-shadow: 1px 1px 1px #31393d;
+}
+.page-section.intro {
+	min-height: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.page-section#home {
+	background: url(../images/miami_flying_2.jpeg) no-repeat center top fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+}
+
+#home-text {
+	top: 100px;
+	position: relative;
+}
+
+#home-text h1 {
+	margin-bottom: 0;
+}
+
+#home-subtext {
+	color: white;
+	text-shadow: 1px 1px 1px #31393d;
+}
+
+#addresses {
+	width: 100%;
+}
+
+.page-section#about {
+
+}
+
+.page-section#pic2 {
+	height: 500px;
+	background: url(../images/speedtriple.jpg) no-repeat center bottom fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.page-section#pic3 {
+	height: 500px;
+	background: url(../images/hamburg2.jpg) no-repeat center top fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.page-section#pic4 {
+	height: 500px;
+	background: url(../images/usa.jpg) no-repeat center top fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.btn {
+	font-weight: 200;
+}
+.btn-dark {
+	background: #444;
+	color: #fff;
+}
+.btn-dark:hover {
+	background: #000;
+	color: #fff;
+}
+.back-to-top {
+	display: inline-block;
+	clear: both;
+	background: #fff;
+	color: #333;
+	padding: 0 10px 5px;
+	margin: 20px 0 0;
+	text-shadow: none;
+}
+.back-to-top:hover {
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+}
+hr {border-color: #ddd;}
+
+@media (min-width: 768px) {
+	.header .navbar-brand {
+		padding-left: 0;
+	}
+	.navbar-nav {
+		float: right;
+	}
+}
+@media (max-width: 480px) {
+	.page-section h1 {
+		font-size: 3em;
+	}
+	.page-section h2 {
+		font-size: 2em;
+	}
+	.page-section p {
+		font-size: 1em;
+		margin: 0 0 20px;
+	}
+}
+
+.furbtn {
+	display: inline-block;
+	padding: 10px 15px;
+	color: #fff;
+	border: 3px solid #fff;
+	border-radius: 50px;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	font-size: 20px;
+}
+
+.furbtn:hover {
+	color: #4C4F55;
+	border: 3px solid #4C4F55;
+	text-decoration: none;
+}
+
+.socialimg {
+	display: block;
+	height: 200px;
+	width: 200px;
+	background-position: 50% 50%;
+	-webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+    overflow:hidden;
+}
+
+.socialimg:hover {
+	-webkit-transform:rotate(23deg);
+    -moz-transform:rotate(23deg);
+    -o-transform:rotate(23deg);
+}
+
+#facebook {
+	background: url('../images/social/fb.png');
+}
+
+#google {
+	background: url('../images/social/google.png');
+}
+
+#xing {
+	background: url('../images/social/xing.png');
+}
+
+#linkedin {
+	background: url('../images/social/linkedin.png');
+}
+
+#github {
+	background: url('../images/social/github2.png');
+}
+
+#googlemaps { 
+    position:absolute;
+	width: 100%;
+	height: 300px;
+	z-index: 0;
+}
+
+#ontopofmap {
+	width: 100%;
+	padding: 0 0 20px 0;
+	position: absolute;
+	z-index: 1;
+}
+
+#impressum h4 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.table-borderless {
+	border: 0;
+}
