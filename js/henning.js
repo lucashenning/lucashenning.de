@@ -142,7 +142,7 @@ function initialize() {
 	  // @25.7909901,-80.1950131 = MIAMI
 	  center: new google.maps.LatLng(25.7909901,-80.1950131),
 	  styles: gstyle,
-	  zoom: 11,
+	  zoom: 12,
 	  mapTypeId: google.maps.MapTypeId.ROADMAP,
 	  disableDefaultUI: true,
 	  disableDoubleClickZoom: true,
