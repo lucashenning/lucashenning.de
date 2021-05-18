@@ -37,14 +37,14 @@ $(document).ready(function() {
 		dataType:  'json',        // 'xml', 'script', or 'json' (expected server response type) 
         //clearForm: true,     // clear all form fields after successful submit 
         //resetForm: true,        // reset the form after successful submit 
-		beforeSubmit:    function() {
+		beforeSubmit: function() {
 			$('#submit_btn').button('loading');
 			$("#contact_form :input").attr("disabled", true);
 			$('#result').hide();
 			$('#result').removeClass();
 			return true;
 		},
-		success: 		function(data) {
+		success: function(data) {
 			$('#result').html = data.result;
 			if(data.hasError) {
 				$('#result').addClass("alert alert-warning");
@@ -57,10 +57,11 @@ $(document).ready(function() {
 			$('#result').html("Thanks for reaching out. I'll get back to you shortly.");
 			$('#result').fadeIn('slow');
 		},
-		error:           function(data) {
-			$('#result').html = data;
+		error: function(data) {
+			$('#result').html('There was an issue with the form submission. Please Try again.');
 			$('#result').addClass("alert alert-danger");
 			$('#result').fadeIn('slow');
+			$('#submit_btn').button('reset');
 			$("#contact_form :input").attr("disabled", false);
 		},
 	};
