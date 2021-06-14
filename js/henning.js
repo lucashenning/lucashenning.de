@@ -1,7 +1,7 @@
 var captionLength = 0;
 var caption = '';
 
-$(document).ready(function() {
+$(document).ready(async function() {
 	// navigation click actions	
 	$('.scroll-link').on('click', function(event){
 		event.preventDefault();
@@ -30,6 +30,11 @@ $(document).ready(function() {
 	// 	  verticalScrolling: true
 	// 	});
 	// }
+
+	const botpoison = new Botpoison({
+		publicKey: 'pk_8c0f4d2f-c96c-47b6-aa33-05a070ee79ce'
+	});
+	const { solution } = await botpoison.challenge();
 	
 	// send form
 	var options = {
@@ -37,7 +42,7 @@ $(document).ready(function() {
 		dataType:  'json',        // 'xml', 'script', or 'json' (expected server response type) 
         //clearForm: true,     // clear all form fields after successful submit 
         //resetForm: true,        // reset the form after successful submit 
-		data: new FormData($('#contact_form')),
+		data: { _botpoison: solution },
 		beforeSubmit: function() {
 			$('#submit_btn').button('loading');
 			$("#contact_form :input").attr("disabled", true);
