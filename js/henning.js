@@ -37,6 +37,7 @@ $(document).ready(function() {
 		dataType:  'json',        // 'xml', 'script', or 'json' (expected server response type) 
         //clearForm: true,     // clear all form fields after successful submit 
         //resetForm: true,        // reset the form after successful submit 
+		data: new FormData($('#contact_form')),
 		beforeSubmit: function() {
 			$('#submit_btn').button('loading');
 			$("#contact_form :input").attr("disabled", true);
