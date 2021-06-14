@@ -227,6 +227,15 @@ hr {border-color: #ddd;}
 	}
 }
 
+
+@media ( max-width: 979px ) {
+	.page-section {
+		background-size: 100% auto !important;
+		background-position: top center !important;
+		background-image: cover !important;
+	}
+}
+
 .furbtn {
 	display: inline-block;
 	padding: 10px 15px;

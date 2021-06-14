@@ -22,14 +22,14 @@ $(document).ready(function() {
 	
 	
 	// parallax
-	if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|MSIE|Opera Mini/i.test(navigator.userAgent) && !isIE() ) {
-		$.stellar({
-		  // Refreshes parallax content on window load and resize
-		  responsive: true,
-		  horizontalScrolling: false,
-		  verticalScrolling: true
-		});
-	}
+	// if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|MSIE|Opera Mini/i.test(navigator.userAgent) && !isIE() ) {
+	// 	$.stellar({
+	// 	  // Refreshes parallax content on window load and resize
+	// 	  responsive: true,
+	// 	  horizontalScrolling: false,
+	// 	  verticalScrolling: true
+	// 	});
+	// }
 	
 	// send form
 	var options = {

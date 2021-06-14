@@ -17,7 +17,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Gugi" rel="stylesheet">
 	<link rel="stylesheet" href="css/henning.css" />
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="https://unpkg.com/@botpoison/browser"></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="55">
@@ -144,7 +144,12 @@
 					custom_theme_widget: 'recaptcha_widget'
 				 };
 			</script>
-			<form id="contact_form" action="https://submit-form.com/2k7TW9T1" method="post">
+			<form 
+				id="contact_form" 
+				action="https://submit-form.com/2k7TW9T1" 
+				data-botpoison-public-key="pk_8c0f4d2f-c96c-47b6-aa33-05a070ee79ce" 
+				method="post"
+				>
 				<div class="col-md-5">
 				  <div class="form-group">
 					<label for="name">Name:</label>
