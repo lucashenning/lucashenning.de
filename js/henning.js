@@ -1,7 +1,7 @@
 var captionLength = 0;
 var caption = '';
 
-$(document).ready(async function() {
+$(document).ready(function() {
 	// navigation click actions	
 	$('.scroll-link').on('click', function(event){
 		event.preventDefault();
@@ -20,7 +20,6 @@ $(document).ready(async function() {
 		$('#main-nav').toggleClass("open");
 	});
 	
-	
 	// parallax
 	// if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|MSIE|Opera Mini/i.test(navigator.userAgent) && !isIE() ) {
 	// 	$.stellar({
@@ -30,11 +29,6 @@ $(document).ready(async function() {
 	// 	  verticalScrolling: true
 	// 	});
 	// }
-
-	const botpoison = new Botpoison({
-		publicKey: 'pk_8c0f4d2f-c96c-47b6-aa33-05a070ee79ce'
-	});
-	const { solution } = await botpoison.challenge();
 	
 	// send form
 	var options = {
@@ -42,7 +36,6 @@ $(document).ready(async function() {
 		dataType:  'json',        // 'xml', 'script', or 'json' (expected server response type) 
         //clearForm: true,     // clear all form fields after successful submit 
         //resetForm: true,        // reset the form after successful submit 
-		data: { _botpoison: solution },
 		beforeSubmit: function() {
 			$('#submit_btn').button('loading');
 			$("#contact_form :input").attr("disabled", true);
@@ -73,7 +66,15 @@ $(document).ready(async function() {
 	};
 	
 	$('#contact_form').submit(function() { 
-        $(this).ajaxSubmit(options); 
+		$('#submit_btn').button('loading');
+		$("#contact_form :input").attr("disabled", true);
+		const botpoison = new Botpoison({
+			publicKey: 'pk_8c0f4d2f-c96c-47b6-aa33-05a070ee79ce'
+		});
+		botpoison.challenge().then(botpoisonResult => {
+			options.data = { _botpoison : botpoisonResult.solution }
+			$(this).ajaxSubmit(options); 
+		});
         return false; 
     });
 	
