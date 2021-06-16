@@ -227,11 +227,10 @@ hr {border-color: #ddd;}
 	}
 }
 
-
 @media ( max-width: 979px ) {
 	.page-section {
-		background-size: 100% auto !important;
 		background-position: top center !important;
+		background-attachment: scroll !important;
 		background-image: cover !important;
 	}
 }
